@@ -36,7 +36,6 @@ public class LoginController {
 			@RequestParam(value = "password") String password,
 			HttpSession session) {
 		
-		System.out.println("llegamos hasta ingresar!");
 		boolean existeUsuario = usuarioService.validarUsuario(email, password);
 		if(existeUsuario) {
 			Usuario usuario = usuarioService.findByEmail(email);
