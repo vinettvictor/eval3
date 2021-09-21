@@ -15,19 +15,20 @@
             <body>
                 <div class="container">
                     <ul class="nav">
+                        <!--Nos redirige a la misma ventana producto-->
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="/producto">Crear Producto</a>
                         </li>
+                        <!--Cerramos sesion-->
                         <li class="nav-item">
                             <a class="nav-link" href="/logout">Cerra Sesion</a>
                         </li>
+                        <!--Permite volver atras, a la ventana home-->
                         <li class="nav-item">
                             <a class="nav-link" href="/home">Volver</a>
                         </li>
                     </ul>
-
                 </div>
-
 
                 <div>
                     <h1>Crear Producto</h1>
