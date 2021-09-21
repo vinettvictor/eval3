@@ -35,38 +35,17 @@
                 <br>
                 <h1>Lista de Productos</h1>
                 <hr>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>N#</th>
-                            <th>Nombre</th>
-                            <th>Precio</th>
-                            <th>Descripcion</th>
-                            <th>Acciones</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <c:forEach var="producto" items="${lista_productos}">
-                            <tr>
-                                <td>
-                                    <c:out value="${producto.id}"></c:out>
-                                </td>
-                                <td>
-                                    <c:out value="${producto.nombre}"></c:out>
-                                </td>
-                                <td>
-                                    <c:out value="${producto.precio}"></c:out>
-                                </td>
-                                <td>
-                                    <c:out value="${producto.descripcion}"></c:out>
-                                </td>
-                                <td>
-                                    <input type="submit" value="Agregar al Carrito"></input>
-                                </td>
-                            </tr>
-                        </c:forEach>
-                    </tbody>
-                </table>
+                <form:form action="/home" method="get" modelAttribute="usuario">
+                    <label for="productos">Seleccione Productos:</label><br>
+                    <select name="productos" multiple>
+					<c:forEach var="producto" items="${lista_productos}" >
+						<option value="<c:out value="${producto.id}"></c:out>"> <c:out value="${producto.nombre}"></c:out> <c:out value="${producto.precio}"></c:out></option>
+					</c:forEach>
+					</select>
+                    <br>
+
+                    <input type="submit" value="Crear Persona">
+                </form:form>
                 <hr>
                 </div>
 
