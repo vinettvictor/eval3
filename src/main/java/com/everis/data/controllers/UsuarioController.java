@@ -35,6 +35,7 @@ public class UsuarioController {
 		model.addAttribute("lista_productos", productoService.findAll());
 		return "usuario.jsp";
 	}
+
 	
 		//METODO PARA INSERTAR DATOS
 		@RequestMapping(value="/crear", method = RequestMethod.POST)
