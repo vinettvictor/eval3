@@ -32,7 +32,7 @@ public class LoginController {
 			Usuario usuario = usuarioService.findByEmail(email);
 			//guardando un elemento en session
 			session.setAttribute("usuarioId", usuario.getId());
-			return "home.jsp";
+			return "redirect:/home";
 		}
 		
 		return "redirect:/";
